@@ -44,12 +44,3 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
 
   </div>
 </section>
-
-<!-- ── CANAL PARALLAX ────────────────────────────────────────────────────── -->
-<section class="canal-strip">
-  <div class="canal-strip-content">
-    <p class="canal-strip-quote">Des platanes centenaires, un canal, et 21 kilomètres de pure émotion.</p>
-    <a href="{{ '/parcours/' | relative_url }}" class="btn btn-outline">Découvrir le parcours</a>
-  </div>
-</section>
-
