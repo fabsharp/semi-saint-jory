@@ -3,7 +3,7 @@ description: "1ère édition — 29 novembre 2026, Halle des Sports Allison Pine
 # Format : https://<username>.github.io  si le repo s'appelle <username>.github.io
 # Format : https://<username>.github.io/<repo>  si c'est un repo projet
 url: "https://fabsharp.github.io"
-baseurl: "/semi-saint-jory" # laisser "" si le repo s'appelle username.github.io
+baseurl: "/" # laisser "" si le repo s'appelle username.github.io
 
 lang: fr
 
