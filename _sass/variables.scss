@@ -1,0 +1,33 @@
+// Brand colors — warm orange/amber identity, canal theme
+$color-primary:    #e8640a;   // orange principal (logo)
+$color-secondary:  #1a1a1a;   // quasi-noir (textes, header)
+$color-accent:     #f5c234;   // jaune-ambre (contrastes, valeurs)
+$color-canal:      #4a7c6f;   // vert canal (touche nature)
+$color-light:      #fdf6ec;   // blanc chaud
+$color-dark:       #111111;
+$color-text:       #1a1a1a;
+$color-muted:      #666666;
+$color-border:     #e8ddd0;
+
+// Typography
+$font-family-base:    'Segoe UI', system-ui, -apple-system, sans-serif;
+$font-family-heading: 'Segoe UI', system-ui, -apple-system, sans-serif;
+$font-size-base:      16px;
+$line-height-base:    1.6;
+
+// Layout
+$container-max:   1100px;
+$container-pad:   1.25rem;
+$header-height:   64px;
+
+// Breakpoints
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+
+// Spacing scale
+$space-xs:  0.25rem;
+$space-sm:  0.5rem;
+$space-md:  1rem;
+$space-lg:  2rem;
+$space-xl:  4rem;

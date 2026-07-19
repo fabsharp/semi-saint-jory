@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Copy-Item \"c:\\\\src\\\\semi-saint-jory\\\\mockup\\\\inspiration-1.jpg\"  \"c:\\\\src\\\\semi-saint-jory\\\\assets\\\\images\\\\poster.jpg\")",
+      "PowerShell(Copy-Item \"c:\\\\src\\\\semi-saint-jory\\\\mockup\\\\header.jpg\"          \"c:\\\\src\\\\semi-saint-jory\\\\assets\\\\images\\\\logo.jpg\")",
+      "PowerShell(Copy-Item \"c:\\\\src\\\\semi-saint-jory\\\\mockup\\\\inspiration-3.jpg\"   \"c:\\\\src\\\\semi-saint-jory\\\\assets\\\\images\\\\km0-bg.jpg\")",
+      "PowerShell(Copy-Item \"c:\\\\src\\\\semi-saint-jory\\\\mockup\\\\landscape-1.jpg\"     \"c:\\\\src\\\\semi-saint-jory\\\\assets\\\\images\\\\registration-bg.jpg\")",
+      "PowerShell(Copy-Item \"c:\\\\src\\\\semi-saint-jory\\\\mockup\\\\inspiration-2.webp\"  \"c:\\\\src\\\\semi-saint-jory\\\\assets\\\\images\\\\wheel.webp\")",
+      "PowerShell(Copy-Item \"c:\\\\src\\\\semi-saint-jory\\\\favicon.svg\" \"c:\\\\src\\\\semi-saint-jory\\\\assets\\\\images\\\\wheel-icon.svg\")"
+    ]
+  }
+}

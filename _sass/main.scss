@@ -1,0 +1,324 @@
+@use "variables" as *;
+
+// ─── Reset & base ────────────────────────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: $font-size-base; scroll-behavior: smooth; }
+
+body {
+  font-family: $font-family-base;
+  color: $color-text;
+  background: #fff;
+  line-height: $line-height-base;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: $color-primary; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 {
+  font-family: $font-family-heading;
+  color: $color-secondary;
+  line-height: 1.2;
+  margin-bottom: $space-md;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.3rem; }
+
+p { margin-bottom: $space-md; }
+
+ul, ol { padding-left: 1.5rem; margin-bottom: $space-md; }
+
+// ─── Layout ──────────────────────────────────────────────────────────────────
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-pad;
+}
+
+// ─── Header ──────────────────────────────────────────────────────────────────
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17,17,17,.95);
+  backdrop-filter: blur(6px);
+  height: $header-height;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.site-logo {
+  .logo-text {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+  }
+  &:hover { text-decoration: none; }
+}
+
+.site-nav {
+  ul { display: flex; gap: $space-md; list-style: none; padding: 0; margin: 0; }
+  a {
+    color: rgba(255,255,255,.85);
+    font-size: .9rem;
+    font-weight: 500;
+    padding: $space-xs $space-sm;
+    border-radius: 4px;
+    transition: background .15s, color .15s;
+    &:hover, &.active {
+      color: #fff;
+      background: rgba(255,255,255,.15);
+      text-decoration: none;
+    }
+    &.active { background: $color-primary; }
+  }
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $space-sm;
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform .2s;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .nav-toggle { display: flex; }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: $header-height;
+    left: 0; right: 0;
+    background: $color-secondary;
+    padding: $space-md;
+    ul { flex-direction: column; gap: $space-xs; }
+    &.open { display: block; }
+  }
+}
+
+// ─── Hero (home) ─────────────────────────────────────────────────────────────
+.hero {
+  position: relative;
+  background: $color-secondary;
+  color: #fff;
+  padding: $space-xl $space-md;
+  text-align: center;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+    opacity: .35;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 60%, rgba(0,0,0,.5) 100%);
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-content { max-width: 700px; margin: 0 auto; }
+
+  h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: $space-sm;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    opacity: .9;
+    margin-bottom: $space-lg;
+  }
+
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $space-lg;
+    margin-bottom: $space-lg;
+
+    .meta-item {
+      text-align: center;
+      .meta-value { font-size: 1.8rem; font-weight: 700; color: $color-accent; }
+      .meta-label { font-size: .85rem; opacity: .8; text-transform: uppercase; letter-spacing: 1px; }
+    }
+  }
+}
+
+// ─── Buttons ─────────────────────────────────────────────────────────────────
+.btn {
+  display: inline-block;
+  padding: .75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity .15s, transform .1s;
+  cursor: pointer;
+  border: none;
+  &:hover { opacity: .9; text-decoration: none; transform: translateY(-1px); }
+}
+.btn-primary { background: $color-primary; color: #fff; }
+.btn-outline  { background: transparent; color: #fff; border: 2px solid #fff; }
+
+// ─── Sections ────────────────────────────────────────────────────────────────
+.section {
+  padding: $space-xl $space-md;
+  &--alt { background: $color-light; }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: $space-lg;
+  &::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: $color-primary;
+    margin: $space-sm auto 0;
+    border-radius: 2px;
+  }
+}
+
+// ─── Cards ───────────────────────────────────────────────────────────────────
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: $space-lg;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: $space-lg;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  transition: box-shadow .2s;
+  &:hover { box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+
+  .card-icon { font-size: 2rem; margin-bottom: $space-sm; }
+  h3 { margin-bottom: $space-sm; }
+}
+
+// ─── Page hero (inner pages) ─────────────────────────────────────────────────
+.page-hero {
+  background: $color-secondary;
+  color: #fff;
+  padding: $space-lg $space-md;
+
+  .page-title { color: #fff; margin-bottom: $space-xs; font-size: 2rem; }
+  .page-subtitle { opacity: .8; }
+}
+
+.page-content { padding: $space-xl $space-md; }
+
+// ─── Tables ──────────────────────────────────────────────────────────────────
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $space-lg;
+
+  th {
+    background: $color-secondary;
+    color: #fff;
+    text-align: left;
+    padding: $space-sm $space-md;
+    font-weight: 600;
+  }
+
+  td {
+    padding: $space-sm $space-md;
+    border-bottom: 1px solid $color-border;
+  }
+
+  tr:nth-child(even) td { background: $color-light; }
+}
+
+// ─── Footer ──────────────────────────────────────────────────────────────────
+.site-footer {
+  background: $color-dark;
+  color: rgba(255,255,255,.7);
+  padding: $space-lg $space-md;
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-md;
+  }
+
+  .footer-brand p { margin-bottom: $space-xs; }
+
+  .footer-nav {
+    ul { display: flex; gap: $space-md; list-style: none; padding: 0; margin: 0; }
+    a { color: rgba(255,255,255,.6); &:hover { color: #fff; } }
+  }
+
+  .footer-copy { font-size: .85rem; }
+}
+
+// ─── Countdown ───────────────────────────────────────────────────────────────
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: $space-lg;
+  flex-wrap: wrap;
+  margin: $space-lg 0;
+
+  .countdown-unit {
+    text-align: center;
+    .countdown-value {
+      display: block;
+      font-size: 3rem;
+      font-weight: 700;
+      color: $color-accent;
+      line-height: 1;
+    }
+    .countdown-label {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: .8;
+    }
+  }
+}
+
+// ─── Map placeholder ─────────────────────────────────────────────────────────
+.map-placeholder {
+  background: $color-light;
+  border: 2px dashed $color-border;
+  border-radius: 8px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-muted;
+  font-size: 1.1rem;
+}

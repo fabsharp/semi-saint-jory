@@ -1,0 +1,45 @@
+title: "Semi-Marathon Saint-Jory"
+description: "1ère édition — 29 novembre 2026, Halle des Sports Allison Pineau, Saint-Jory."
+# Format : https://<username>.github.io  si le repo s'appelle <username>.github.io
+# Format : https://<username>.github.io/<repo>  si c'est un repo projet
+url: "https://fabsharp.github.io"
+baseurl: "/semi-saint-jory" # laisser "" si le repo s'appelle username.github.io
+
+lang: fr
+
+event:
+  date: "29 Novembre 2026"
+  location: "Saint-Jory"
+  depart: "Halle des Sports Allison Pineau"
+  distance_semi: "21,1 km"
+  distance_relais: "10,5 km chacun"
+  inscription_url: "https://chrono-start.fr/Inscription/Course/detail/c/5285"
+  edition: "1ère édition"
+
+nav:
+  - title: "Accueil"
+    url: "/"
+  - title: "Inscription"
+    url: "/inscription/"
+  - title: "Parcours"
+    url: "/parcours/"
+  - title: "Programme"
+    url: "/programme/"
+  - title: "Pratique"
+    url: "/pratique/"
+  - title: "Résultats"
+    url: "/resultats/"
+  - title: "Contact"
+    url: "/contact/"
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

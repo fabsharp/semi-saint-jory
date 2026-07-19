@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Logo Semi-Marathon Saint-Jory" class="footer-logo">
+      <p>{{ site.event.date }}</p>
+      <p>{{ site.event.depart }}, {{ site.event.location }}</p>
+    </div>
+    <nav class="footer-nav" aria-label="Liens secondaires">
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="footer-links">
+      <p><a href="{{ site.event.inscription_url }}" target="_blank" rel="noopener">S'inscrire</a></p>
+      <p><a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a></p>
+      <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+    </div>
+  </div>
+</footer>
