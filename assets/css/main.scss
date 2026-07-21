@@ -317,6 +317,40 @@ table {
     a { color: rgba(255,255,255,.6); font-weight: 400; &:hover { color: $color-primary; text-decoration: none; } }
   }
   .footer-copy { font-size: .85rem; }
+
+  .footer-social {
+    text-align: center;
+
+    .footer-social-label {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.5);
+      margin-bottom: $space-xs;
+    }
+
+    .footer-social-icons { display: flex; gap: $space-sm; justify-content: center; }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.7);
+      transition: border-color .2s, color .2s, background .2s;
+
+      svg { fill: currentColor; }
+
+      &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+        background: rgba($color-primary, .1);
+      }
+    }
+  }
 }
 
 // ─── Countdown ───────────────────────────────────────────────────────────────

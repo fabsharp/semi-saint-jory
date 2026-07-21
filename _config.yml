@@ -7,6 +7,9 @@ baseurl: "/" # laisser "" si le repo s'appelle username.github.io
 
 lang: fr
 
+social:
+  instagram: "https://www.instagram.com/semi_de_saintjory/"
+
 event:
   date: "29 Novembre 2026"
   location: "Saint-Jory"
