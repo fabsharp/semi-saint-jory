@@ -709,7 +709,7 @@ table {
 .canal-strip {
   position: relative;
   padding: 6rem $container-pad;
-  background: url('/assets/images/hero-bg.jpg') center / cover no-repeat fixed;
+  background: url('{{ "/assets/images/hero-bg.jpg" | relative_url }}') center / cover no-repeat fixed;
   text-align: center;
   color: #fff;
 
