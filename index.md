@@ -6,6 +6,11 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
 
 <!-- ── HERO ──────────────────────────────────────────────────────────────── -->
 <section class="hero">
+  <div class="hero-bg-slideshow" aria-hidden="true">
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/head-1.webp' | relative_url }}');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/head-2.jpg' | relative_url }}');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/head-3.jpg' | relative_url }}');"></div>
+  </div>
   <div class="hero-content">
     <p class="hero-edition">1ère édition</p>
     <h1>Semi-Marathon<br>Saint-Jory</h1>
