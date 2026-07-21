@@ -5,6 +5,24 @@ subtitle: Courez le long du Canal Latéral à la Garonne
 permalink: /parcours/
 ---
 
+## Carte du parcours
+
+<div class="route-map-embed">
+  <iframe src="https://www.komoot.com/tour/3127837457/embed?share_token=akZEvi3gTM57GxdxATnvaLj2ohBWI3mF3jZHDyvotFtbMs1CN9&amp;hl=fr&amp;layout=compact" width="100%" height="260" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<p style="text-align:center; margin-top: 1rem;">
+  <a class="btn btn-primary" href="{{ '/assets/gpx/parcours-semi.gpx' | relative_url }}" download>Télécharger le tracé GPX</a>
+</p>
+
+## Ravitaillement
+
+| Point            | Distance   |
+| ---------------- | ---------- |
+| Ravitaillement 1 | À préciser |
+| Ravitaillement 2 | À préciser |
+| Arrivée          | 21,1 km    |
+
 <!-- ═══════════════════════════════════════════════════════════════════════════
      KM 0 — LE DÉPART
      Photos : assets/images/parcours/km0-*.jpg
@@ -96,17 +114,3 @@ permalink: /parcours/
 </section>
 
 ---
-
-## Carte du parcours
-
-<div class="map-placeholder">
-  🗺 Carte interactive à intégrer (Umap / Google Maps embed)
-</div>
-
-## Ravitaillement
-
-| Point            | Distance   |
-| ---------------- | ---------- |
-| Ravitaillement 1 | À préciser |
-| Ravitaillement 2 | À préciser |
-| Arrivée          | 21,1 km    |

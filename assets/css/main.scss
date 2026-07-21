@@ -600,17 +600,13 @@ table {
   h3 { color: $color-primary; margin-top: $space-md; &:first-child { margin-top: 0; } }
 }
 
-// ─── Map placeholder ─────────────────────────────────────────────────────────
-.map-placeholder {
-  background: $color-light;
-  border: 2px dashed $color-border;
+// ─── Route map ───────────────────────────────────────────────────────────────
+.route-map-embed {
   border-radius: 8px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $color-muted;
-  font-size: 1.1rem;
+  overflow: hidden;
+  border: 1px solid $color-border;
+
+  iframe { display: block; }
 }
 
 // ─── Hero extras ─────────────────────────────────────────────────────────────
