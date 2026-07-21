@@ -14,6 +14,7 @@ event:
   date: "29 Novembre 2026"
   location: "Saint-Jory"
   depart: "Halle des Sports Allison Pineau"
+  maps_url: "https://maps.app.goo.gl/4C118gtzU4dhDGmQ6"
   distance_semi: "21,1 km"
   distance_relais: "10,5 km chacun"
   inscription_url: "https://chrono-start.fr/Inscription/Course/detail/c/5285"

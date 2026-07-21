@@ -7,7 +7,7 @@ permalink: /pratique/
 
 ## Lieu de départ / arrivée
 
-**Halle des Sports Allison Pineau**
+**[Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"}**
 Saint-Jory, 31790
 
 <div class="map-placeholder">
@@ -30,7 +30,7 @@ Saint-Jory, 31790
 
 ## Vestiaires et consignes
 
-- Vestiaires disponibles à la Halle des Sports Allison Pineau
+- Vestiaires disponibles à la [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"}
 - Consignes bagages : *à préciser*
 
 ## Restauration

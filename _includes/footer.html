@@ -3,7 +3,7 @@
     <div class="footer-brand">
       <img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Logo Semi-Marathon Saint-Jory" class="footer-logo">
       <p>{{ site.event.date }}</p>
-      <p>{{ site.event.depart }}, {{ site.event.location }}</p>
+      <p><a href="{{ site.event.maps_url }}" target="_blank" rel="noopener">{{ site.event.depart }}, {{ site.event.location }}</a></p>
     </div>
     <nav class="footer-nav" aria-label="Liens secondaires">
       <ul>

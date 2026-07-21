@@ -14,7 +14,7 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
   <div class="hero-content">
     <p class="hero-edition">1ère édition</p>
     <h1>Semi-Marathon<br>Saint-Jory</h1>
-    <p class="hero-subtitle">29 Novembre 2026 — Halle des Sports Allison Pineau</p>
+    <p class="hero-subtitle">29 Novembre 2026 — <a href="{{ site.event.maps_url }}" target="_blank" rel="noopener">Halle des Sports Allison Pineau</a></p>
 
     <div id="countdown" class="countdown" data-target="2026-11-29T09:00:00"></div>
 
@@ -41,7 +41,7 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
         <li><span class="fact-icon">🏃</span> <strong>Semi-marathon</strong> — 21,1 km individuel</li>
         <li><span class="fact-icon">👥</span> <strong>Semi en relais</strong> — 10,5 km chacun</li>
         <li><span class="fact-icon">⭐</span> <strong>Saint-Jo'Kids</strong> — 600 m · 1 km · 2 km</li>
-        <li><span class="fact-icon">📍</span> Halle des Sports Allison Pineau, Saint-Jory</li>
+        <li><span class="fact-icon">📍</span> <a href="{{ site.event.maps_url }}" target="_blank" rel="noopener">Halle des Sports Allison Pineau, Saint-Jory</a></li>
       </ul>
 
       <a href="{{ site.event.inscription_url }}" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire sur chrono-start.fr</a>

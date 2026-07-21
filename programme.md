@@ -9,7 +9,7 @@ permalink: /programme/
 
 | Horaire | Événement |
 |---------|-----------|
-| À préciser | Ouverture du retrait des dossards — Halle des Sports Allison Pineau |
+| À préciser | Ouverture du retrait des dossards — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"} |
 | À préciser | Départ Saint-Jo'Kids (600m / 1km / 2km) |
 | À préciser | Départ Semi en relais (10,5 km chacun) |
 | À préciser | Départ Semi-marathon (21,1 km) |
@@ -20,7 +20,7 @@ permalink: /programme/
 
 Les dossards peuvent être retirés :
 - **La veille de la course** *(horaires à préciser)*
-- **Le matin même** à partir de *(heure à préciser)* — Halle des Sports Allison Pineau
+- **Le matin même** à partir de *(heure à préciser)* — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"}
 
 Munissez-vous de votre confirmation d'inscription et de votre certificat médical (ou licence FFA).
 

@@ -12,7 +12,7 @@ permalink: /parcours/
 <section class="km-section">
   <div class="km-header">
     <span class="km-badge">KM 0</span>
-    <h2 class="km-title">Le départ — Halle des Sports Allison Pineau</h2>
+    <h2 class="km-title">Le départ — <a href="{{ site.event.maps_url }}" target="_blank" rel="noopener">Halle des Sports Allison Pineau</a></h2>
   </div>
   <div class="km-body">
 
@@ -32,13 +32,13 @@ permalink: /parcours/
     <div class="km-text">
       <p>📍 Ici commencera ton Aventure.</p>
 
-<p>Le KM 0 du Semi-Marathon de Saint-Jory prendra vie à la Halle des Sports Allison Pineau 🤾</p>
+<p>Le KM 0 du Semi-Marathon de Saint-Jory prendra vie à la <a href="{{ site.event.maps_url }}" target="_blank" rel="noopener">Halle des Sports Allison Pineau</a> 🤾</p>
 
 <p>Le lieu du retrait des dossards, les premiers frissons avant le départ, les encouragements, les retrouvailles, l’énergie du village course… tout commencera ici.</p>
 
 <p>C’est de cet endroit que des centaines de coureurs s’élanceront pour écrire l’histoire de cette première édition 🥁</p>
 
-<p>Inaugurée en présence de l’athlète, la Halle des Sports Allison Pineau est un équipement moderne dédié à la pratique sportive et à la vie associative locale.</p>
+<p>Inaugurée en présence de l’athlète, la <a href="{{ site.event.maps_url }}" target="_blank" rel="noopener">Halle des Sports Allison Pineau</a> est un équipement moderne dédié à la pratique sportive et à la vie associative locale.</p>
 
 <p>✨️ Un nom porteur de sens ! ✨️</p>
 
