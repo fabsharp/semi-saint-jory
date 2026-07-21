@@ -7,25 +7,10 @@ permalink: /contact/
 
 ## Organisateur
 
-**Nom de l'association / club**
-*À préciser*
+**[Terre de Running Saint-Jory](https://share.google/4E6CXJkmgdUMA5ky5){:target="_blank" rel="noopener"}**
 
 ## Nous contacter
 
-- **Email :** contact@semi-saint-jory.fr *(à préciser)*
-- **Téléphone :** À préciser
-- **Réseaux sociaux :** À préciser
-
-## Formulaire de contact
-
-*Un formulaire de contact peut être intégré ici via [Formspree](https://formspree.io) ou un service équivalent compatible avec les sites statiques.*
-
-```html
-<!-- Exemple Formspree — remplacer YOUR_FORM_ID -->
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-  <label>Nom <input type="text" name="name" required></label>
-  <label>Email <input type="email" name="email" required></label>
-  <label>Message <textarea name="message" rows="5" required></textarea></label>
-  <button type="submit" class="btn btn-primary">Envoyer</button>
-</form>
-```
+- **Email :** [jeanchristophe.maillet@terrederunning.com](mailto:jeanchristophe.maillet@terrederunning.com)
+- **Téléphone :** [05.16.41.97.76](tel:+33516419776)
+- **Réseaux sociaux :** [www.instagram.com/semi_de_saintjory](https://www.instagram.com/semi_de_saintjory/){:target="_blank" rel="noopener"}

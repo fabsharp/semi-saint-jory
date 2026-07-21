@@ -6,9 +6,9 @@ permalink: /mentions-legales/
 
 ## Éditeur du site
 
-*Nom de l'association / organisateur — à préciser*
+Terre de Running Saint-Jory
 *Adresse — à préciser*
-*Email — à préciser*
+Email : [jeanchristophe.maillet@terrederunning.com](mailto:jeanchristophe.maillet@terrederunning.com)
 
 ## Hébergement
 
