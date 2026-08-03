@@ -1,6 +1,7 @@
 # Liste des sponsors/partenaires affichés sur la page d'accueil.
 # file: nom du fichier dans assets/images/sponsors/
 # url : optionnel, lien vers le site du sponsor
+# dark_bg : optionnel, true si le logo est clair/blanc et a besoin d'une carte sombre
 - name: "Chrono-Start"
   file: "chrono-start.jpeg"
   url: "https://chrono-start.fr"
@@ -20,3 +21,11 @@
   file: "change-it.png"
 - name: "La Fleur d'Or"
   file: "fleur-dor.png"
+- name: "Family Sporting"
+  file: "family-sporting.jpeg"
+- name: "Ooovation"
+  file: "ooovation.jpeg"
+- name: "Ville de Saint-Jory"
+  file: "ville-saint-joryjpeg.jpeg"
+- name: "Bomolet"  # TODO: vérifier le nom
+  file: "bomolet.jpeg"

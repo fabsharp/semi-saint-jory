@@ -45,23 +45,6 @@
   setInterval(update, 1000);
 })();
 
-// Sponsors slideshow (autoplay crossfade)
-(function () {
-  var el = document.querySelector('[data-sponsor-slideshow]');
-  if (!el) return;
-
-  var slides = Array.from(el.querySelectorAll('.sponsor-slide'));
-  if (slides.length < 2) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var current = 0;
-  setInterval(function () {
-    slides[current].classList.remove('is-active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('is-active');
-  }, 3000);
-})();
-
 // Slideshows
 (function () {
   document.querySelectorAll('[data-slideshow]').forEach(function (el) {

@@ -581,38 +581,44 @@ table {
   letter-spacing: .5px;
 }
 
-// ─── Sponsors slideshow ────────────────────────────────────────────────────
-.sponsors-slideshow {
-  position: relative;
-  max-width: 640px;
-  height: 280px;
-  margin: 0 auto;
+// ─── Sponsors ────────────────────────────────────────────────────────────────
+.sponsors-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space-lg;
+}
 
-  .sponsor-slide {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border: 1px solid $color-border;
-    border-radius: 8px;
-    padding: $space-lg;
-    opacity: 0;
-    transition: opacity .6s ease;
+.sponsor-item {
+  width: 300px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: $space-lg;
+  transition: box-shadow .2s, border-color .2s, transform .2s;
 
-    &.is-active { opacity: 1; z-index: 1; }
-
-    a { display: contents; }
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
+
+  &--dark {
+    background: $color-dark;
+    border-color: $color-dark;
+  }
+}
+
+a.sponsor-item:hover {
+  box-shadow: 0 6px 24px rgba($color-primary, .18);
+  border-color: $color-primary;
+  transform: translateY(-2px);
 }
 
 .gallery-placeholder {

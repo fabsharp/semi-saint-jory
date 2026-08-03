@@ -54,13 +54,19 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
 <section class="section section--alt">
   <div class="container">
     <h2 class="section-title">Nos partenaires</h2>
-    <div class="sponsors-slideshow" data-sponsor-slideshow aria-label="Nos partenaires et sponsors">
+    <div class="sponsors-row">
       {% for sponsor in site.data.sponsors %}
-      <div class="sponsor-slide{% if forloop.first %} is-active{% endif %}">
-        {% if sponsor.url %}<a href="{{ sponsor.url }}" target="_blank" rel="noopener">{% endif %}
-        <img src="{{ '/assets/images/sponsors/' | append: sponsor.file | relative_url }}" alt="{{ sponsor.name }}" loading="lazy">
-        {% if sponsor.url %}</a>{% endif %}
-      </div>
+        {% assign item_class = "sponsor-item" %}
+        {% if sponsor.dark_bg %}{% assign item_class = item_class | append: " sponsor-item--dark" %}{% endif %}
+        {% if sponsor.url %}
+        <a class="{{ item_class }}" href="{{ sponsor.url }}" target="_blank" rel="noopener" aria-label="{{ sponsor.name }}">
+          <img src="{{ '/assets/images/sponsors/' | append: sponsor.file | relative_url }}" alt="{{ sponsor.name }}" loading="lazy">
+        </a>
+        {% else %}
+        <div class="{{ item_class }}">
+          <img src="{{ '/assets/images/sponsors/' | append: sponsor.file | relative_url }}" alt="{{ sponsor.name }}" loading="lazy">
+        </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
