@@ -49,3 +49,19 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
 
   </div>
 </section>
+
+<!-- ── SPONSORS ──────────────────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">Nos partenaires</h2>
+    <div class="sponsors-slideshow" data-sponsor-slideshow aria-label="Nos partenaires et sponsors">
+      {% for sponsor in site.data.sponsors %}
+      <div class="sponsor-slide{% if forloop.first %} is-active{% endif %}">
+        {% if sponsor.url %}<a href="{{ sponsor.url }}" target="_blank" rel="noopener">{% endif %}
+        <img src="{{ '/assets/images/sponsors/' | append: sponsor.file | relative_url }}" alt="{{ sponsor.name }}" loading="lazy">
+        {% if sponsor.url %}</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

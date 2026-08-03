@@ -1,0 +1,22 @@
+# Liste des sponsors/partenaires affichés sur la page d'accueil.
+# file: nom du fichier dans assets/images/sponsors/
+# url : optionnel, lien vers le site du sponsor
+- name: "Chrono-Start"
+  file: "chrono-start.jpeg"
+  url: "https://chrono-start.fr"
+- name: "Crédit Agricole"
+  file: "credit-agricole.jpeg"
+- name: "Carrefour Market"
+  file: "carrefour-market.jpeg"
+- name: "Frugal"
+  file: "frugal.jpeg"
+- name: "Alto"
+  file: "alto.jpeg"
+- name: "Mi Création"
+  file: "mi-creation.jpeg"
+- name: "Piou"
+  file: "piou.jpeg"
+- name: "Change it"
+  file: "change-it.png"
+- name: "La Fleur d'Or"
+  file: "fleur-dor.png"
