@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Régénère assets/images/sponsors/*.{png,jpg,...} à partir de assets/images/sponsors/src/.
+"""Régénère assets/images/sponsors/*.png à partir de assets/images/sponsors/src/.
 
 Pour ajouter ou remplacer un sponsor : dépose un logo (JPEG/PNG/WEBP) ou un PDF
 vectoriel dans src/, puis relance ce script. Chaque fichier de src/ produit une
-image web dans le dossier parent (les PDF sont rendus en PNG transparent), et
-tout nouveau fichier reçoit une entrée de départ dans _data/sponsors.yml (à
-compléter/corriger à la main : nom affiché, lien éventuel).
+image transparente et recadrée sur le logo dans le dossier parent (le fond uni
+des photos/scans est détecté et supprimé, les PDF sont rendus directement en
+transparent), et tout nouveau fichier reçoit une entrée de départ dans
+_data/sponsors.yml (à compléter/corriger à la main : nom affiché, lien
+éventuel).
 
-Le nom de fichier de sortie est dérivé du nom du fichier source (slugifié) :
-renomme le fichier dans src/ si tu veux changer le nom de sortie.
+Le nom de fichier de sortie est dérivé du nom du fichier source (slugifié),
+toujours avec l'extension .png (nécessaire pour la transparence) : renomme le
+fichier dans src/ si tu veux changer le nom de sortie.
 
 Usage :
     pip install -r scripts/requirements.txt
@@ -24,8 +27,9 @@ import unicodedata
 from pathlib import Path
 
 import fitz  # PyMuPDF
+import numpy as np
 import yaml
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC_DIR = ROOT / "assets/images/sponsors/src"
@@ -34,6 +38,10 @@ DATA_FILE = ROOT / "_data/sponsors.yml"
 
 RASTER_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
 MAX_DIM = 1600  # le slideshow affiche au plus ~640x280 ; large marge pour le retina
+
+BG_THRESHOLD = 28  # tolérance de couleur pour repérer le fond uni (0-255)
+CROP_PADDING = 16  # marge (px) conservée autour du logo après recadrage
+FEATHER = 1  # léger flou des bords de transparence pour éviter les contours crénelés
 
 
 def slugify(stem: str) -> str:
@@ -46,25 +54,76 @@ def slug_to_name(slug: str) -> str:
     return " ".join(w.capitalize() for w in slug.split("-"))
 
 
+def _has_transparency(im: Image.Image) -> bool:
+    """Vrai si l'image a déjà un vrai fond transparent (pas juste de l'anti-aliasing)."""
+    if im.mode != "RGBA":
+        return False
+    alpha = np.asarray(im.getchannel("A"))
+    return (alpha <= 5).mean() > 0.005
+
+
+def strip_background(im: Image.Image) -> Image.Image:
+    """Rend transparent le fond uni d'un logo photographié/scanné.
+
+    Part des 4 coins et propage (flood fill, avec tolérance de couleur) vers
+    l'intérieur : seul le fond connecté aux bords est supprimé, ce qui évite
+    de créer des trous si le logo contient des zones de couleur proche du fond.
+    """
+    rgb = im.convert("RGB")
+    mask_src = rgb.copy()
+    w, h = mask_src.size
+    sentinel = (255, 0, 255)  # couleur improbable dans un logo
+    for seed in {(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)}:
+        if mask_src.getpixel(seed) != sentinel:
+            ImageDraw.floodfill(mask_src, seed, sentinel, thresh=BG_THRESHOLD)
+
+    bg_mask = np.all(np.asarray(mask_src) == sentinel, axis=-1)
+    alpha = Image.fromarray(np.where(bg_mask, 0, 255).astype("uint8"), mode="L")
+    if FEATHER:
+        alpha = alpha.filter(ImageFilter.GaussianBlur(FEATHER))
+
+    out = rgb.convert("RGBA")
+    out.putalpha(alpha)
+    return out
+
+
+def crop_to_content(im: Image.Image, padding: int = CROP_PADDING) -> Image.Image:
+    """Recadre sur le rectangle englobant des pixels non transparents."""
+    if im.mode != "RGBA":
+        return im
+    alpha = np.asarray(im.getchannel("A"))
+    ys, xs = np.nonzero(alpha > 10)
+    if xs.size == 0 or ys.size == 0:
+        return im
+    left, right = max(int(xs.min()) - padding, 0), min(int(xs.max()) + padding + 1, im.width)
+    top, bottom = max(int(ys.min()) - padding, 0), min(int(ys.max()) + padding + 1, im.height)
+    return im.crop((left, top, right, bottom))
+
+
+def _prepare(im: Image.Image) -> Image.Image:
+    """Fond transparent (si besoin) + recadrage sur le logo."""
+    im = im if _has_transparency(im) else strip_background(im)
+    return crop_to_content(im)
+
+
 def render_pdf(src: Path, dest: Path) -> None:
     doc = fitz.open(src)
     page = doc[0]
     scale = min(4.0, MAX_DIM / max(page.rect.width, page.rect.height))
     scale = max(scale, 1.0)
     pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=True)
-    pix.save(dest)
+    im = Image.frombytes("RGBA", (pix.width, pix.height), pix.samples)
+    im = _prepare(im)
+    im.save(dest)
 
 
 def resize_raster(src: Path, dest: Path) -> None:
     with Image.open(src) as im:
+        im = _prepare(im)
         if max(im.size) > MAX_DIM:
             ratio = MAX_DIM / max(im.size)
             im = im.resize((round(im.width * ratio), round(im.height * ratio)), Image.LANCZOS)
-        save_kwargs = {"optimize": True}
-        if dest.suffix.lower() in (".jpg", ".jpeg"):
-            im = im.convert("RGB")
-            save_kwargs["quality"] = 88
-        im.save(dest, **save_kwargs)
+        im.save(dest, optimize=True)
 
 
 def main():
@@ -86,10 +145,8 @@ def main():
         ext = src.suffix.lower()
         slug = slugify(src.stem)
 
-        if ext == ".pdf":
-            dest = OUT_DIR / f"{slug}.png"
-        elif ext in RASTER_EXTS:
-            dest = OUT_DIR / f"{slug}{ext}"
+        if ext == ".pdf" or ext in RASTER_EXTS:
+            dest = OUT_DIR / f"{slug}.png"  # toujours en PNG : le fond est rendu transparent
         else:
             print(f"Ignore (extension non supportee) : {src.name}")
             continue
@@ -108,8 +165,31 @@ def main():
 
         (created if is_new else updated).append(dest.name)
 
+        # Nettoie les anciennes sorties du même sponsor (ex: alto.jpeg -> alto.png)
+        for old_ext in RASTER_EXTS | {".png"}:
+            stale = OUT_DIR / f"{slug}{old_ext}"
+            if stale != dest and stale.exists():
+                stale.unlink()
+
     sponsors = yaml.safe_load(DATA_FILE.read_text(encoding="utf-8")) or []
-    known_files = {s["file"] for s in sponsors if isinstance(s, dict) and "file" in s}
+    known_by_slug = {
+        Path(s["file"]).stem: s["file"] for s in sponsors if isinstance(s, dict) and "file" in s
+    }
+    known_files = set(known_by_slug.values())
+
+    # Migre les entrées existantes dont seule l'extension a changé (ex: passage en PNG),
+    # en éditant le texte brut pour préserver commentaires et mise en forme du YAML.
+    renames = {
+        old: new
+        for new in generated_files
+        if (old := known_by_slug.get(Path(new).stem)) and old != new
+    }
+    if renames:
+        text = DATA_FILE.read_text(encoding="utf-8")
+        for old_name, new_name in renames.items():
+            text = re.sub(rf'(file:\s*"){re.escape(old_name)}(")', rf"\g<1>{new_name}\g<2>", text)
+        DATA_FILE.write_text(text, encoding="utf-8")
+        known_files = (known_files - renames.keys()) | set(renames.values())
 
     missing_from_yml = sorted(generated_files - known_files)
     orphaned_in_yml = sorted(known_files - generated_files)
@@ -123,6 +203,8 @@ def main():
     print(f"Generes      : {created or '-'}")
     print(f"Mis a jour   : {updated or '-'}")
     print(f"Deja a jour  : {skipped or '-'}")
+    if renames:
+        print(f"Renomme dans sponsors.yml : {renames}")
     if missing_from_yml:
         print(f"Ajoutes a sponsors.yml (a verifier) : {missing_from_yml}")
     if orphaned_in_yml:

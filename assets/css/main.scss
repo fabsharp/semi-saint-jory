@@ -595,11 +595,8 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border: 1px solid $color-border;
-  border-radius: 8px;
-  padding: $space-lg;
-  transition: box-shadow .2s, border-color .2s, transform .2s;
+  padding: $space-xs;
+  transition: transform .2s, filter .2s;
 
   img {
     max-width: 100%;
@@ -607,18 +604,18 @@ table {
     width: auto;
     height: auto;
     object-fit: contain;
+    transition: filter .2s;
   }
 
   &--dark {
     background: $color-dark;
-    border-color: $color-dark;
+    border-radius: 8px;
   }
 }
 
 a.sponsor-item:hover {
-  box-shadow: 0 6px 24px rgba($color-primary, .18);
-  border-color: $color-primary;
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(0 8px 18px rgba($color-primary, .3));
 }
 
 .gallery-placeholder {
