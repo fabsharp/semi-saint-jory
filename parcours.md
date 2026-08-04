@@ -8,7 +8,6 @@ route_map: true
 
 ## Carte du parcours
 <div id="route-map" class="route-map-embed" data-gpx="{{ '/assets/gpx/parcours-semi.gpx' | relative_url }}"></div>
-<div id="route-elevation" class="route-elevation"></div>
 
 <p style="text-align:center; margin-top: 1rem;">
   <a class="btn btn-primary" href="{{ '/assets/gpx/parcours-semi.gpx' | relative_url }}" download>Télécharger le tracé GPX</a>
@@ -16,11 +15,17 @@ route_map: true
 
 ## Ravitaillement
 
+⚠️ Pas de gobelets aux ravitaillements
+
+Dans une démarche éco-responsable, aucun gobelet ne sera distribué aux ravitaillements.
+
+Pensez à vous munir de votre éco-cup, gourde ou flasque personnelle afin de pouvoir vous ravitailler en toute autonomie.
+
 | Point            | Distance   |
 | ---------------- | ---------- |
-| Ravitaillement 1 | À préciser |
-| Ravitaillement 2 | À préciser |
-| Arrivée          | 21,1 km    |
+| Ravitaillement 1 | 5.4km |
+| Ravitaillement 2 | 10.6km |
+| Ravitaillement 3 | 15.8km |
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      KM 0 — LE DÉPART

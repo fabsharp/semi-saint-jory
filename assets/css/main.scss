@@ -647,39 +647,6 @@ a.sponsor-item:hover {
   iframe { display: block; }
 }
 
-.route-elevation {
-  margin-top: $space-sm;
-  padding: $space-sm $space-md;
-  border-radius: 8px;
-  border: 1px solid $color-border;
-  background: $color-light;
-
-  svg {
-    display: block;
-    width: 100%;
-    height: 100px;
-  }
-
-  .elevation-area {
-    fill: rgba($color-canal, .15);
-  }
-
-  .elevation-line {
-    fill: none;
-    stroke: $color-canal;
-    stroke-width: 2;
-    vector-effect: non-scaling-stroke;
-  }
-
-  .elevation-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: $space-xs;
-    font-size: .85rem;
-    color: $color-muted;
-  }
-}
-
 // ─── Hero extras ─────────────────────────────────────────────────────────────
 .hero-edition {
   font-size: .85rem;
