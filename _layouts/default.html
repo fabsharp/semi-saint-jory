@@ -8,6 +8,9 @@
   <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ '/assets/images/logo.jpg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% if page.route_map %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  {% endif %}
   {% seo %}
 </head>
 <body>
@@ -17,5 +20,10 @@
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  {% if page.route_map %}
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+  <script src="{{ '/assets/js/route-map.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>

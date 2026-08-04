@@ -1,9 +1,7 @@
 title: "Semi-Marathon Saint-Jory"
 description: "1ère édition — 29 novembre 2026, Halle des Sports Allison Pineau, Saint-Jory."
-# Format : https://<username>.github.io  si le repo s'appelle <username>.github.io
-# Format : https://<username>.github.io/<repo>  si c'est un repo projet
-url: "https://fabsharp.github.io"
-baseurl: "/" # laisser "" si le repo s'appelle username.github.io
+url: "https://semi-saint-jory.fr"
+baseurl: ""
 
 lang: fr
 
