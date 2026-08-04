@@ -9,18 +9,17 @@ permalink: /programme/
 
 | Horaire | Événement |
 |---------|-----------|
-| À préciser | Ouverture du retrait des dossards — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"} |
+| 8h30 | Ouverture du retrait des dossards — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"} |
 | À préciser | Départ Saint-Jo'Kids (600m / 1km / 2km) |
 | À préciser | Départ Semi en relais (10,5 km chacun) |
-| À préciser | Départ Semi-marathon (21,1 km) |
-| À préciser | Remise des récompenses |
-| À préciser | Fin de la manifestation |
+| 10h | Départ Semi-marathon (21,1 km) |
+| 12h30 | Remise des récompenses |
 
 ## Retrait des dossards
 
 Les dossards peuvent être retirés :
-- **La veille de la course** *(horaires à préciser)*
-- **Le matin même** à partir de *(heure à préciser)* — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"}
+- **La semaine de la course** à partir du 23 novembre à 14h au magasin [Terre de running Saint Jory](https://share.google/1L1WPvXc1DPLAe0hh){:target="_blank" rel="noopener"}
+- **Le matin même** à partir de *8h30* — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"}
 
 Munissez-vous de votre confirmation d'inscription et de votre certificat médical (ou licence FFA).
 
@@ -29,8 +28,3 @@ Munissez-vous de votre confirmation d'inscription et de votre certificat médica
 - Podium scratch hommes / femmes — Semi-marathon et Semi en relais
 - Podium par catégorie d'âge
 - Récompenses Saint-Jo'Kids
-- *Détails à préciser*
-
-## Village et animations
-
-*Programme des animations à préciser.*
