@@ -234,9 +234,14 @@ blockquote {
 .btn-primary {
   background: $color-primary;
   color: #fff;
-  &:hover { background: $color-primary-dark; opacity: 1; }
+  &:hover { background: $color-primary-dark; color: #fff; opacity: 1; }
 }
-.btn-outline  { background: transparent; color: #fff; border: 2px solid #fff; }
+.btn-outline  {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  &:hover { color: #fff; }
+}
 
 // ─── Sections ────────────────────────────────────────────────────────────────
 .section {

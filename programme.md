@@ -11,7 +11,7 @@ permalink: /programme/
 |---------|-----------|
 | 8h30 | Ouverture du retrait des dossards — [Halle des Sports Allison Pineau]({{ site.event.maps_url }}){:target="_blank" rel="noopener"} |
 | À préciser | Départ Saint-Jo'Kids (600m / 1km / 2km) |
-| À préciser | Départ Semi en relais (10,5 km chacun) |
+| 10h | Départ Semi en relais (10,5 km chacun) |
 | 10h | Départ Semi-marathon (21,1 km) |
 | 12h30 | Remise des récompenses |
 

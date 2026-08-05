@@ -8,8 +8,8 @@
 - name: "Crédit Agricole"
   file: "credit-agricole.png"
   url: "https://www.credit-agricole.fr/ca-toulouse31/particulier.html"
-- name: "Carrefour Market"
-  file: "carrefour-market.png"
+- name: "Carrefour Express"
+  file: "carrefour-express.png"
   url: "https://www.instagram.com/carrefourexpresssaint/"
 - name: "Frugal"
   file: "frugal.png"
@@ -41,3 +41,8 @@
 - name: "Bomolet"  # TODO: vérifier le nom
   file: "bomolet.svg"
   url: "https://www.bomolet.com"
+- name: "Terre de running"  # TODO: vérifier le nom
+  file: "terre-de-running.png"
+  url: "https://www.terrederunning.com"
+- name: "Carrefour Market"  # TODO: vérifier le nom
+  file: "carrefour-market.png"
