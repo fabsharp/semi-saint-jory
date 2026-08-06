@@ -47,5 +47,3 @@
 - name: "Team Benhamou"
   file: "team-benhamou.png"
   url: "https://coach-de-sport.com/coach/jonathan-coach-sportif-toulouse-bruguieres/"
-- name: "Carrefour Market"  # TODO: vérifier le nom
-  file: "carrefour-market.png"
