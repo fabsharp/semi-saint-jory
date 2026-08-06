@@ -18,5 +18,6 @@ Les inscriptions sont ouvertes sur **[chrono-start.com]({{ site.event.inscriptio
 | Saint-Jo'Kids — Cadet | 2 km | Date de Naissance entre le 01/01/2014 et le 31/12/2015 inclus |
 
 - Pour toute question : [contactez-nous]({{ '/contact/' | relative_url }}).
+- Consultez le [règlement de la course](https://chrono-start.fr/Inscription/media/upload/course/5285-1778671074.pdf){:target="_blank"}.
 
 <a href="{{ site.event.inscription_url }}" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire sur chrono-start.com</a>

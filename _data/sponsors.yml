@@ -38,11 +38,14 @@
 - name: "Ville de Saint-Jory"
   file: "ville-saint-jory.png"
   url: "https://www.ville-saint-jory.fr"
-- name: "Bomolet"  # TODO: vérifier le nom
+- name: "Bomolet" # TODO: vérifier le nom
   file: "bomolet.svg"
   url: "https://www.bomolet.com"
-- name: "Terre de running"  # TODO: vérifier le nom
+- name: "Terre de running" # TODO: vérifier le nom
   file: "terre-de-running.png"
   url: "https://www.terrederunning.com"
+- name: "Team Benhamou"
+  file: "team-benhamou.png"
+  url: "https://coach-de-sport.com/coach/jonathan-coach-sportif-toulouse-bruguieres/"
 - name: "Carrefour Market"  # TODO: vérifier le nom
   file: "carrefour-market.png"

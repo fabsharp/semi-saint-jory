@@ -5,8 +5,12 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
 ---
 
 <!-- ── HERO ──────────────────────────────────────────────────────────────── -->
-<section class="hero">
+<section class="hero"> 
   <div class="hero-bg-slideshow" aria-hidden="true">
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-4.1.jpeg' | relative_url }}');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-4.2.jpeg' | relative_url }}');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-9.1.jpeg' | relative_url }}');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-9.2.jpeg' | relative_url }}');"></div>
     <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-1-3.1.webp' | relative_url }}');"></div>
     <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-1-3.2.webp' | relative_url }}');"></div>
     <div class="hero-bg-slide" style="background-image: url('{{ '/assets/images/header/km-1-3.3.webp' | relative_url }}');"></div>

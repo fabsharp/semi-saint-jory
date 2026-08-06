@@ -68,8 +68,21 @@
     if (placeholder) placeholder.hidden = true;
     if (counter) counter.querySelector('.slide-total').textContent = imgs.length;
 
+    // Size the track to match the active image's own aspect ratio, so
+    // portrait shots don't letterbox inside a landscape-sized box.
+    function applyHeight(img) {
+      if (img.naturalWidth) {
+        track.style.height = (track.clientWidth * img.naturalHeight / img.naturalWidth) + 'px';
+      } else {
+        img.addEventListener('load', function () { applyHeight(img); }, { once: true });
+      }
+    }
+
+    window.addEventListener('resize', function () { applyHeight(imgs[current]); });
+
     // Activate first slide
     imgs[0].classList.add('slide-active');
+    applyHeight(imgs[0]);
 
     // Build dots
     imgs.forEach(function (_, i) {
@@ -91,6 +104,7 @@
       imgs[current].classList.remove('slide-active');
       current = (index + imgs.length) % imgs.length;
       imgs[current].classList.add('slide-active');
+      applyHeight(imgs[current]);
       el.querySelectorAll('.slide-dot').forEach(function (d, i) {
         d.classList.toggle('active', i === current);
       });
