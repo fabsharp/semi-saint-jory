@@ -1,8 +1,8 @@
+# Manual-only: production now deploys via Cloudflare Workers (wrangler.jsonc).
+# Kept as a fallback deploy path — run manually from the Actions tab if needed.
 name: Deploy Jekyll site to GitHub Pages
 
 on:
-  push:
-    branches: ["master"]
   workflow_dispatch:
 
 permissions:
