@@ -26,6 +26,5 @@ Munissez-vous de votre confirmation d'inscription.
 
 ## Récompenses
 
-- Podium scratch hommes / femmes — Semi-marathon et Semi en relais
-- Podium par catégorie d'âge
-- Récompenses Saint-Jo'Kids
+Podium scratch hommes / femmes — Semi-marathon et Semi en relais
+
