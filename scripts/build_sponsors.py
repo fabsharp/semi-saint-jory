@@ -66,18 +66,32 @@ def strip_background(im: Image.Image) -> Image.Image:
     """Rend transparent le fond uni d'un logo photographié/scanné.
 
     Part des 4 coins et propage (flood fill, avec tolérance de couleur) vers
-    l'intérieur : seul le fond connecté aux bords est supprimé, ce qui évite
-    de créer des trous si le logo contient des zones de couleur proche du fond.
+    l'intérieur pour capter le fond connecté aux bords (y compris ses dégradés
+    de compression/scan). En complément, toute zone de l'image dont la couleur
+    est proche de celle d'un des coins est aussi rendue transparente même si
+    elle n'est pas reliée au bord — par exemple l'intérieur d'une lettre
+    fermée (un "o", un "d"...) qui a été scanné avec la même couleur de fond.
     """
     rgb = im.convert("RGB")
+    arr = np.asarray(rgb).astype(int)
     mask_src = rgb.copy()
     w, h = mask_src.size
     sentinel = (255, 0, 255)  # couleur improbable dans un logo
+    corner_colors = []
     for seed in {(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)}:
-        if mask_src.getpixel(seed) != sentinel:
+        color = mask_src.getpixel(seed)
+        if color != sentinel:
+            corner_colors.append(color)
             ImageDraw.floodfill(mask_src, seed, sentinel, thresh=BG_THRESHOLD)
 
     bg_mask = np.all(np.asarray(mask_src) == sentinel, axis=-1)
+
+    if corner_colors:
+        colors = np.array(corner_colors)[:, None, None, :]  # (n, 1, 1, 3)
+        diff = np.abs(arr[None, :, :, :] - colors).max(axis=-1)  # (n, h, w)
+        color_mask = (diff <= BG_THRESHOLD).any(axis=0)
+        bg_mask = bg_mask | color_mask
+
     alpha = Image.fromarray(np.where(bg_mask, 0, 255).astype("uint8"), mode="L")
     if FEATHER:
         alpha = alpha.filter(ImageFilter.GaussianBlur(FEATHER))

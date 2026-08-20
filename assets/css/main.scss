@@ -386,6 +386,7 @@ $hero-slide-segment: math.div(100%, $hero-slide-count);
 // ─── Sections ────────────────────────────────────────────────────────────────
 .section {
   padding: $space-xl $space-md;
+  scroll-margin-top: $header-height;
   &--alt {
     background: $color-light;
   }

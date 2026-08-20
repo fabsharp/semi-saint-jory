@@ -17,6 +17,8 @@ event:
   distance_relais: "10,5 km chacun"
   inscription_url: "https://chrono-start.fr/Inscription/Course/detail/c/5285"
   edition: "1ère édition"
+  plan_entrainement_url: "https://docs.google.com/forms/d/1S-WzFxD9fVfjbpb7bFTH9wZVCCNiRFi9y3USqreLLRs/edit"
+  test_vma_url: "https://docs.google.com/forms/d/e/1FAIpQLSefnZc6WF9y33OfUqsUZFkAFBwSZw1lLcKSA57jaNpZdt-XpA/viewform"
 
 nav:
   - title: "Accueil"

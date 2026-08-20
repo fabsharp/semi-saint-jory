@@ -6,10 +6,9 @@ permalink: /mentions-legales/
 
 ## Éditeur du site
 
-**Terre de Running Saint-Jory**
-_[À COMPLÉTER — forme juridique, ex. « association loi du 1er juillet 1901 »]_
-_[À COMPLÉTER — adresse du siège social]_
-_[À COMPLÉTER — numéro SIRET ou numéro RNA (répertoire national des associations)]_
+**SARL TDR SAINT JORY**
+SIRET : 990 727 323 00018
+60A route métropolitaine 820, 31790 Saint-Jory
 
 Directeur de la publication : _[À COMPLÉTER — nom du président ou responsable désigné]_
 
@@ -26,7 +25,7 @@ Le contenu de ce site (textes, photos, logos, tracés du parcours) est la propri
 
 ## Données personnelles
 
-Le responsable du traitement des données collectées via ce site est **Terre de Running Saint-Jory**, dont les coordonnées figurent ci-dessus.
+Le responsable du traitement des données collectées via ce site est **SARL TDR SAINT JORY**, dont les coordonnées figurent ci-dessus.
 
 ### Formulaire de contact
 

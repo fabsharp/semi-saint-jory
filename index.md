@@ -25,6 +25,7 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
     <div class="hero-actions">
       <a href="{{ site.event.inscription_url }}" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire</a>
       <a href="{{ '/parcours/' | relative_url }}" class="btn btn-outline">Voir le parcours</a>
+      <a href="#preparer-entrainement" class="btn btn-outline">Préparer votre course</a>
     </div>
 
   </div>
@@ -51,6 +52,28 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
       <a href="{{ site.event.inscription_url }}" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire sur chrono-start.fr</a>
     </div>
 
+  </div>
+</section>
+
+<!-- ── CTA: PLAN & TEST VMA ─────────────────────────────────────────────── -->
+<section id="preparer-entrainement" class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">Préparez votre course</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Plan d'entraînement personnalisé</h3>
+        <p>Accédez à votre plan perso de 12 semaines pour préparer le semi-marathon dans les meilleures conditions.</p>
+        <a href="{{ site.event.plan_entrainement_url }}" class="btn btn-primary" target="_blank" rel="noopener">Accéder au plan perso de 12 semaines</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">⏱️</div>
+        <h3>Test VMA</h3>
+        <p>Inscrivez-vous à un test VMA pour évaluer votre niveau et calibrer vos allures d'entraînement.</p>
+        <p>📅 Jeudi 3 septembre 2026 à 19h15<br>📍 <a href="https://www.google.com/maps/search/?api=1&query=Stade+municipal+David+Berty+Saint-Jory" target="_blank" rel="noopener">Stade municipal David Berty, Saint-Jory</a></p>
+        <a href="{{ site.event.test_vma_url }}" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire à un test VMA</a>
+      </div>
+    </div>
   </div>
 </section>
 
