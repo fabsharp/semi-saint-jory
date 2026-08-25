@@ -37,7 +37,7 @@
   url: "https://www.ooovation.com"
 - name: "Ville de Saint-Jory"
   file: "ville-saint-jory.png"
-  url: "https://www.ville-saint-jory.fr"
+  url: "https://saint-jory.fr"
 - name: "Bomolet" # TODO: vérifier le nom
   file: "bomolet.svg"
   url: "https://www.bomolet.com"
@@ -47,5 +47,5 @@
 - name: "Team Benhamou"
   file: "team-benhamou.png"
   url: "https://coach-de-sport.com/coach/jonathan-coach-sportif-toulouse-bruguieres/"
-- name: "Carrefour Market"  # TODO: vérifier le nom
+- name: "Carrefour Market" # TODO: vérifier le nom
   file: "carrefour-market.png"
