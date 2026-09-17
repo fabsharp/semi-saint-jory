@@ -22,7 +22,7 @@ route_map: true
 | Ravitaillement 1 | 5km    |
 | Ravitaillement 2 | 10.5km   |
 | Ravitaillement 3 | 15.5km   |
-| Ravitaillement 3 | 21km   |
+| Ravitaillement 4 | 21km   |
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      KM 0 — LE DÉPART
