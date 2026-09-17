@@ -17,17 +17,12 @@ route_map: true
 
 ## Ravitaillement
 
-⚠️ Pas de gobelets aux ravitaillements
-
-Dans une démarche éco-responsable, aucun gobelet ne sera distribué aux ravitaillements.
-
-Pensez à vous munir de votre éco-cup, gourde ou flasque personnelle afin de pouvoir vous ravitailler en toute autonomie.
-
 | Point            | Distance |
 | ---------------- | -------- |
 | Ravitaillement 1 | 5.4km    |
-| Ravitaillement 2 | 10.6km   |
-| Ravitaillement 3 | 15.8km   |
+| Ravitaillement 2 | 10.5km   |
+| Ravitaillement 3 | 15.5km   |
+| Ravitaillement 3 | 21km   |
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      KM 0 — LE DÉPART
