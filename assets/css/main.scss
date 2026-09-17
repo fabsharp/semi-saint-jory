@@ -382,6 +382,15 @@ $hero-slide-segment: math.div(100%, $hero-slide-count);
     color: #fff;
   }
 }
+.btn-outline-primary {
+  background: transparent;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  &:hover {
+    color: $color-primary-dark;
+    border-color: $color-primary-dark;
+  }
+}
 
 // ─── Sections ────────────────────────────────────────────────────────────────
 .section {

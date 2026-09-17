@@ -10,8 +10,9 @@ route_map: true
 
 <div id="route-map" class="route-map-embed" data-gpx="{{ '/assets/gpx/parcours-semi.gpx' | relative_url }}"></div>
 
-<p style="text-align:center; margin-top: 1rem;">
+<p style="text-align:center; margin-top: 1rem; display:flex; justify-content:center; gap: 1rem; flex-wrap: wrap;">
   <a class="btn btn-primary" href="{{ '/assets/gpx/parcours-semi.gpx' | relative_url }}" download>Télécharger le tracé GPX</a>
+  <a class="btn btn-outline-primary" href="https://www.openrunner.com/route-details/25230183" target="_blank" rel="noopener">Voir sur OpenRunner</a>
 </p>
 
 ## Ravitaillement
