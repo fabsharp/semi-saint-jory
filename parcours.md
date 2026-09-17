@@ -19,7 +19,7 @@ route_map: true
 
 | Point            | Distance |
 | ---------------- | -------- |
-| Ravitaillement 1 | 5.4km    |
+| Ravitaillement 1 | 5km    |
 | Ravitaillement 2 | 10.5km   |
 | Ravitaillement 3 | 15.5km   |
 | Ravitaillement 3 | 21km   |
