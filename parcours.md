@@ -190,4 +190,42 @@ route_map: true
 
   </div>
 </section>
+<section class="km-section km-section--reverse">
+  <div class="km-header">
+    <span class="km-badge">KM 10</span>
+    <h2 class="km-title">Le Lac de Braguessou</h2>
+  </div>
+  <div class="km-body">
+
+    <div data-slideshow>
+      <div class="slideshow-track">
+        <img src="{{ '/assets/images/parcours/km-10.jpeg' | relative_url }}" alt="">
+        <img src="{{ '/assets/images/parcours/km-10-1.jpeg' | relative_url }}" alt="">
+        <img src="{{ '/assets/images/parcours/km-10-2.jpeg' | relative_url }}" alt="">
+        <img src="{{ '/assets/images/parcours/km-10-3.jpeg' | relative_url }}" alt="">
+      </div>
+      <button class="slide-btn slide-prev" aria-label="Précédent">&#10094;</button>
+      <button class="slide-btn slide-next" aria-label="Suivant">&#10095;</button>
+      <div class="slide-dots"></div>
+      <div class="slide-counter"><span class="slide-current">1</span> / <span class="slide-total">1</span></div>
+    </div>
+
+    <div class="km-text">
+
+<p>📍 KM 10 — Le dernier point kilométrique avant le 2ᵉ tour !</p>
+
+<p>Vous allez bientôt découvrir l'un des passages emblématiques du Semi-Marathon de Saint-Jory 👀</p>
+
+<p>🌿 Le Lac de Braguessou</p>
+
+<p>Au 10ᵉ kilomètre, vous atteindrez le dernier point kilométrique avant de repartir pour la deuxième boucle.</p>
+
+<p>À l'origine, le lac n'est pas naturel. Il est né de l'exploitation d'une ancienne gravière en bordure de la Garonne. L'extraction de graviers et de sable y a laissé une vaste excavation qui s'est progressivement remplie d'eau par la nappe phréatique, créant ainsi le plan d'eau actuel. Aujourd'hui, le site est devenu célèbre pour sa base nautique (Awake Park), accueillant un téléski nautique, du wakeboard, du stand-up paddle, ainsi qu'un grand parc de structures gonflables.</p>
+
+<p>On se retrouve au km 10 ? 👊</p>
+
+</div>
+
+  </div>
+</section>
 ---
