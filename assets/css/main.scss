@@ -486,6 +486,29 @@ $hero-slide-segment: math.div(100%, $hero-slide-count);
   .page-subtitle {
     opacity: 0.85;
   }
+
+  .page-hero-cta {
+    margin-top: $space-md;
+  }
+
+  .btn-hero-cta {
+    display: inline-block;
+    background: #fff;
+    color: $color-primary-dark;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: transform 0.15s, box-shadow 0.15s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+      color: $color-primary-dark;
+    }
+  }
 }
 
 .page-content {

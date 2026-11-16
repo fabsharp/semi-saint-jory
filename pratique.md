@@ -3,6 +3,9 @@ layout: page
 title: Infos pratiques
 subtitle: Tout ce qu'il faut savoir pour venir
 permalink: /pratique/
+hero_cta:
+  label: "📖 Lire le Guide du Coureur 2026"
+  url: "https://www.calameo.com/read/0083431983176e97edf33"
 ---
 
 ## Lieu de départ / arrivée

@@ -25,7 +25,7 @@ description: "1ère édition du Semi-Marathon de Saint-Jory — 29 novembre 2026
     <div class="hero-actions">
       <a href="{{ site.event.inscription_url }}" class="btn btn-primary" target="_blank" rel="noopener">S'inscrire</a>
       <a href="{{ '/parcours/' | relative_url }}" class="btn btn-outline">Voir le parcours</a>
-      <a href="#preparer-entrainement" class="btn btn-outline">Préparer votre course</a>
+      <a href="{{ '/pratique/' | relative_url }}" class="btn btn-outline">Guide du coureur</a>
     </div>
 
   </div>

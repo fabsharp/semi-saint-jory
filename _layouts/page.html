@@ -5,6 +5,11 @@ layout: default
   <div class="container">
     <h1 class="page-title">{{ page.title }}</h1>
     {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+    {% if page.hero_cta %}
+    <div class="page-hero-cta">
+      <a href="{{ page.hero_cta.url }}" class="btn btn-hero-cta" target="_blank" rel="noopener">{{ page.hero_cta.label }}</a>
+    </div>
+    {% endif %}
   </div>
 </div>
 
